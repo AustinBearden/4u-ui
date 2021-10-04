@@ -1,0 +1,68 @@
+.layout-one {
+  height: 100vh;
+
+  header {
+    height: 10%;
+    background-color: lightgrey;
+    @include flexRow(space-between, center);
+
+    .left-aligned-items {
+      @include flexRow(space-evenly, center);
+      margin-left: 1rem;
+      height: 100%;
+      background-color: blue;
+    }
+
+    .right-aligned-items {
+      @include flexRow(space-evenly, center);
+      margin-right: 1rem;
+      height: 100%;
+      background-color: red;
+    }
+  }
+
+  body {
+    height: 80%;
+    background-color: yellow;
+    @include flexRow(flex-start, flex-start);
+
+    .left-drawer {
+      height: 100%;
+      width: 20%;
+      background-color: red;
+    }
+
+    .main-content {
+      height: 100%;
+      width: 80%;
+      background-color: lightblue;
+    }
+  }
+
+  footer {
+    height: 10%;
+    background-color: lightgoldenrodyellow;
+    @include flexRow(flex-start, center);
+
+    .left-content {
+      height: 100%;
+      width: 40%;
+      background-color: yellow;
+      @include flexColumn;
+    }
+
+    .center-content {
+      height: 100%;
+      width: 20%;
+      background-color: blue;
+      @include flexColumn;
+    }
+
+    .right-content {
+      height: 100%;
+      width: 40%;
+      background-color: green;
+      @include flexColumn;
+    }
+  }
+}
