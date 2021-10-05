@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import Layout1 from './components/Layout1';
+import UseLayout1 from './components/UseLayout1';
 
 function AppRoutes() {
 
@@ -8,7 +8,7 @@ function AppRoutes() {
     <HashRouter basename={'/4u-ui'}>
       <Switch>
         <Route exact path={'/one'}>
-          <Layout1 />
+          <UseLayout1 />
         </Route>
       </Switch>
     </HashRouter>
