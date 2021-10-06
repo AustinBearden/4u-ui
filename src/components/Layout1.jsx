@@ -20,7 +20,9 @@ function Layout1({ leftHeaderItems, rightHeaderItems, drawerItems, body, footer 
         <div className={'left-drawer'}>
           <div className={'contents'}>
             {drawerItems.map((item, _) => {
-              return <button>{item}</button>
+              return <button onClick={() =>
+                item.action(item.value)}
+              >{item.value}</button>
             })}
           </div>
         </div>

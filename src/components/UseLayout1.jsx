@@ -9,11 +9,21 @@ function UseLayout1() {
     )
   }
 
+  function button1Action(value) {
+    alert(value)
+  }
+
   return (
     <Layout1
       leftHeaderItems={[<div>bob</div>, <div>doe</div>, <div>bill</div>]}
       rightHeaderItems={[<div>bob</div>, <div>john</div>, <div>bill</div>]}
-      drawerItems={[<div>item1</div>, <div>item2</div>, <div>item3</div>]}
+      drawerItems={
+        [
+          { value: 'Button1', action: button1Action },
+          { value: 'Button2', action: button1Action },
+          { value: 'Button3', action: button1Action }
+        ]
+      }
       body={mainBody()}
       footer={{
         left: <div>left footer item</div>,
