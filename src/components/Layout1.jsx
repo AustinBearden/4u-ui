@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from './atoms/Button';
+import SideBar from './molecules/SideBar';
 
 function Layout1({ leftHeaderItems, rightHeaderItems, drawerItems, body, footer }) {
 
@@ -6,26 +8,27 @@ function Layout1({ leftHeaderItems, rightHeaderItems, drawerItems, body, footer 
     <div className={'layout-one'}>
       <header>
         <span className={'left-aligned-items'}>
-          {leftHeaderItems.map((item, _) => {
-            return <div>{item}</div>
+          {/* {leftHeaderItems.map((item, _) => {
+            return <button onClick={() => item.action(item.value)}>{item.value}<div>{item.image}</div></button>
+          })} */}
+          {leftHeaderItems.map((item, index) => {
+            return <Button
+              value={item.value}
+              icon={item.image}
+              action={item.action}
+            />
           })}
         </span>
         <span className={'right-aligned-items'}>
-          {rightHeaderItems.map((item, _) => {
-            return <div>{item}</div>
+          {rightHeaderItems.map((item, index) => {
+            return <Button icon={item.image} action={item.action} />
           })}
         </span>
       </header>
       <body>
-        <div className={'left-drawer'}>
-          <div className={'contents'}>
-            {drawerItems.map((item, _) => {
-              return <button onClick={() =>
-                item.action(item.value)}
-              >{item.value}</button>
-            })}
-          </div>
-        </div>
+        <SideBar
+          barItems={drawerItems}
+        />
         <div className={'main-content'}>
           <div className={'container'}>{body}</div>
         </div>

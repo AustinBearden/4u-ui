@@ -1,5 +1,10 @@
 import React from 'react';
 import Layout1 from './Layout1';
+import SettingsIcon from '@mui/icons-material/Settings';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SearchIcon from '@mui/icons-material/Search';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import AttachmentIcon from '@mui/icons-material/Attachment';
 
 function UseLayout1() {
 
@@ -9,14 +14,14 @@ function UseLayout1() {
     )
   }
 
-  function button1Action(value) {
-    alert(value)
+  function button1Action() {
+    alert('hey there')
   }
 
   return (
     <Layout1
-      leftHeaderItems={[<div>bob</div>, <div>doe</div>, <div>bill</div>]}
-      rightHeaderItems={[<div>bob</div>, <div>john</div>, <div>bill</div>]}
+      leftHeaderItems={[{ image: <ArrowCircleUpIcon />, action: button1Action, value: 'Download' }, { image: <AttachmentIcon />, action: button1Action, value: 'Attachment' }]}
+      rightHeaderItems={[{ image: <SearchIcon />, action: button1Action }, { image: <GitHubIcon />, action: button1Action }, { image: <SettingsIcon />, action: button1Action }]}
       drawerItems={
         [
           { value: 'Button1', action: button1Action },
