@@ -5,12 +5,16 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import AttachmentIcon from '@mui/icons-material/Attachment';
+import FabCard from './molecules/FabCard';
 
 function UseLayout1() {
 
   function mainBody() {
     return (
-      <div>{'content'}</div>
+      <div>
+        <FabCard />
+        <FabCard />
+      </div>
     )
   }
 

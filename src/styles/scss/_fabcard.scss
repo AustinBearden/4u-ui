@@ -1,0 +1,41 @@
+.fab-card-container {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 4px;
+  @include flexRow(flex-start, center);
+
+  flex: 1 1 1 1 1 1;
+
+  .fab-card-body {
+    height: 100%;
+    flex-grow: 5;
+    background-color: green;
+  }
+
+  .fab-card-end {
+    height: 100%;
+    flex-grow: 0.2;
+
+    .menu {
+      background-color: green;
+      height: 100%;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .menu-expanded {
+      display: none;
+    }
+
+    &:hover {
+      .menu {
+        display: none;
+      }
+
+      .menu-expanded {
+        @include flexRow(space-evenly, center);
+        background-color: transparent !important;
+        height: 100%;
+      }
+    }
+  }
+}
