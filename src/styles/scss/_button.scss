@@ -1,3 +1,8 @@
+@mixin hover-state {
+  box-shadow: none;
+  background-color: lightblue;
+}
+
 .ui4-button-value {
   margin: 0.5rem;
   background-color: lightgrey;
@@ -14,11 +19,10 @@
   box-shadow: #00000020 0px 2px 1px -1px,
     #00000014 0px 1px 1px 0px,
     #00000012 0px 1px 3px 0px;
-}
 
-.ui4-button-value:hover {
-  box-shadow: none;
-  background-color: lightblue;
+  &:hover {
+    @include hover-state;
+  }
 }
 
 .ui4-button {
@@ -36,9 +40,8 @@
   box-shadow: #00000020 0px 2px 1px -1px,
     #00000014 0px 1px 1px 0px,
     #00000012 0px 1px 3px 0px;
-}
 
-.ui4-button:hover {
-  box-shadow: none;
-  background-color: lightblue;
+  &:hover {
+    @include hover-state;
+  }
 }

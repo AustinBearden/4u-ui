@@ -1,4 +1,3 @@
-import './sidebar.css';
 
 function SideBar({ barItems }) {
 
