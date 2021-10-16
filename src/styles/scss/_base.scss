@@ -1,3 +1,6 @@
+$border-lightgrey: #8b8484;
+$background-lightgrey: #e3e3e3;
+
 // basic flex definitions
 @mixin flexRow($justify: center, $align: center) {
   display: flex;

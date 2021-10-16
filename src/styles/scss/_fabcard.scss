@@ -4,22 +4,28 @@
   margin-bottom: 4px;
   @include flexRow(flex-start, center);
 
-  flex: 1 1 1 1 1 1;
-
   .fab-card-body {
     height: 100%;
-    flex-grow: 5;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
     background-color: green;
   }
 
   .fab-card-end {
     height: 100%;
-    flex-grow: 0.2;
+    width: 5%;
 
     .menu {
-      background-color: green;
+      // background-color: green;
       height: 100%;
       border-radius: 0 10px 10px 0;
+      // filter: sepia(60%);
+      background-color: $background-lightgrey;
+      @include flexRow;
+      font-size: 30px;
+      box-shadow: #00000020 0px 0px 1px 0px,
+        #00000014 0px 1px 1px 0px,
+        #00000012 0px 1px 1px 0px;
     }
 
     .menu-expanded {
@@ -27,6 +33,10 @@
     }
 
     &:hover {
+      animation-duration: 1s;
+      animation-name: expand-menu;
+      width: 30%;
+
       .menu {
         display: none;
       }
@@ -37,5 +47,15 @@
         height: 100%;
       }
     }
+  }
+}
+
+@keyframes expand-menu {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 30%;
   }
 }
