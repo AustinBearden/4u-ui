@@ -9,11 +9,109 @@ import FabCard from './molecules/FabCard';
 
 function UseLayout1() {
 
+
+
   function mainBody() {
     return (
       <div>
-        <FabCard />
-        <FabCard />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
+        <FabCard
+          bodyText={'The cool menu content'}
+          buttons={[
+            {
+              value: 'Action 1',
+            },
+            {
+              value: 'Action 2',
+            },
+            {
+              value: 'Action 3',
+            }
+          ]}
+        />
       </div>
     )
   }
