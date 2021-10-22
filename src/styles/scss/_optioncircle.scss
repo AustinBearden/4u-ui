@@ -1,0 +1,82 @@
+@mixin sharedQuadInfo($quadrant: 1) {
+  background-color: $background-lightgrey;
+  width: $option-circle-quad-dimension;
+  height: $option-circle-quad-dimension;
+
+  .tile {
+    width: $option-circle-tile-dimension;
+    height: $option-circle-tile-dimension;
+    // background-color: white;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  &:hover .menu {
+    @include flexColumn(space-evenly, center);
+    width: 100%;
+    height: 100%;
+
+    button {
+      width: 98%;
+    }
+  }
+
+  &:hover .tile {
+    display: none;
+  }
+
+  &:hover {
+    border-radius: 10px;
+    background-color: $background-extra-lightgrey;
+  }
+
+  @if $quadrant==1 {
+    border-top-right-radius: 400px;
+  }
+
+  @if $quadrant==2 {
+    margin-bottom: 1rem;
+    border-top-left-radius: 400px;
+  }
+
+  @if $quadrant==3 {
+    border-bottom-left-radius: 400px;
+  }
+
+  @if $quadrant==4 {
+    border-bottom-right-radius: 400px;
+  }
+}
+
+.option-circle {
+  width: 50rem;
+  height: 50rem;
+
+  transform: translate(-10%, -5%);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .quad1 {
+    @include sharedQuadInfo(1);
+    @include flexColumn(flex-end, flex-start);
+  }
+
+  .quad2 {
+    @include sharedQuadInfo(2);
+    @include flexColumn(flex-end, flex-end);
+  }
+
+  .quad3 {
+    @include sharedQuadInfo(3);
+    @include flexColumn(flex-start, flex-end);
+  }
+
+  .quad4 {
+    @include sharedQuadInfo(4);
+  }
+
+}

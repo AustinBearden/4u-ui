@@ -6,12 +6,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import FabCard from './molecules/FabCard';
+import OptionCircle from './molecules/OptionCircle';
 
 function UseLayout1() {
 
-
-
-  function mainBody() {
+  function mainBodyFabCard() {
     return (
       <div>
         <FabCard
@@ -113,6 +112,12 @@ function UseLayout1() {
           ]}
         />
       </div>
+    )
+  }
+
+  function mainBody() {
+    return (
+      <OptionCircle />
     )
   }
 

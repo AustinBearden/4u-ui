@@ -1,5 +1,8 @@
 $border-lightgrey: #8b8484;
 $background-lightgrey: #e3e3e3;
+$background-extra-lightgrey: #e3e3e355;
+$option-circle-quad-dimension: 24.5rem;
+$option-circle-tile-dimension: 17.4rem;
 
 // basic flex definitions
 @mixin flexRow($justify: center, $align: center) {
