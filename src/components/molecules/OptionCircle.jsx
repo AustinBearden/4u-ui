@@ -9,6 +9,8 @@ function OptionCircle() {
         <Button value={'Item 2'} action={() => console.log('hey')} />
         <Button value={'Item 3'} action={() => console.log('hey')} />
         <Button value={'Item 4'} action={() => console.log('hey')} />
+        <Button value={'Item 4'} action={() => console.log('hey')} />
+        <Button value={'Item 4'} action={() => console.log('hey')} />
       </>
     );
   }
