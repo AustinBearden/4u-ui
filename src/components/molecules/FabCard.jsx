@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../atoms/Button';
-import ViewWeekIcon from '@mui/icons-material/ViewWeek';
+// import ViewWeekIcon from '@mui/icons-material/ViewWeek';
 
 function FabCard({ bodyText, buttons }) {
 
@@ -11,12 +11,13 @@ function FabCard({ bodyText, buttons }) {
       </div>
       <div className={'fab-card-end'}>
         <div className={'menu'}>
-          <ViewWeekIcon />
+          {/* <ViewWeekIcon /> */}
         </div>
         <div className={'menu-expanded'}>
           {buttons.map((button, _) => {
             return <Button
               value={button.value}
+              action={() => alert(button.value)}
             />
           })}
         </div>
