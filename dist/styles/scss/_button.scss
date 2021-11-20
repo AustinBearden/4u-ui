@@ -1,0 +1,47 @@
+@mixin hover-state {
+  box-shadow: none;
+  background-color: lightblue;
+}
+
+.ui4-button-value {
+  margin: 0.5rem;
+  background-color: lightgrey;
+  padding: 0 0.8rem 0 0.8rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: auto;
+  color: white;
+  border: none;
+  box-shadow: #00000020 0px 2px 1px -1px,
+    #00000014 0px 1px 1px 0px,
+    #00000012 0px 1px 3px 0px;
+
+  &:hover {
+    @include hover-state;
+  }
+}
+
+.ui4-button {
+  margin: 0.5rem;
+  background-color: lightgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  border: none;
+  box-shadow: #00000020 0px 2px 1px -1px,
+    #00000014 0px 1px 1px 0px,
+    #00000012 0px 1px 3px 0px;
+
+  &:hover {
+    @include hover-state;
+  }
+}
