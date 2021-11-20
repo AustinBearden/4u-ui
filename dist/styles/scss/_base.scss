@@ -1,0 +1,26 @@
+$border-lightgrey: #8b8484;
+$background-lightgrey: #e3e3e3;
+$background-extra-lightgrey: #e3e3e355;
+$option-circle-quad-dimension: 24.5rem;
+$option-circle-tile-dimension: 17.4rem;
+
+// basic flex definitions
+@mixin flexRow($justify: center, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flexColumn($justify: center, $align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin standardShadow {
+  box-shadow: #00000020 0px 2px 1px -1px,
+    #00000014 0px 1px 1px 0px,
+    #00000012 0px 1px 3px 0px;
+}
